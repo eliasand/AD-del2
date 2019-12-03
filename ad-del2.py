@@ -1,14 +1,32 @@
 import csv, random, string, subprocess, platform
+chars = "abcdefghijklmnopqrstuvwxyz"
+chars1 = "1234567890"
+chars2 = "!%&/()=#"
+import random
+import string
+password = ""
 
+for c in range (2):
+    password += random.choice(chars)
+    password += random.choice(chars.upper())
+    password += random.choice(chars1)
+    password += random.choice(chars2)
 
-fields = ['user'] 
+password = ''.join(random.sample(password,len(password)))
+#f= open("losenordfil.txt","a") 
+#f.write(password)
+#f.write("\n")
 
-rows = [ ['Nikhil'], 
-         ['Sanchit'], 
-         ['Aditya'], 
-         ['Sagar'], 
-         ['Prateek'], 
-         ['Sahil']] 
+print("Password: ", (password))
+
+fields = ['user', "password"] 
+
+rows = [ ['Nikhil', (password)], 
+         ['Sanchit', (password)], 
+         ['Aditya', (password)], 
+         ['Sagar', (password)], 
+         ['Prateek', (password)], 
+         ['Sahil', (password)]] 
 
 filename = "Auto_AD.csv"
 
@@ -48,24 +66,3 @@ for row in rows[:5]:
 
     for col in row: 
         print("%10s"%col), 
-
-chars = "abcdefghijklmnopqrstuvwxyz"
-chars1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-chars2 = "1234567890"
-chars3 = "!%&/()=#"
-import random 
-import string
-password = ""
-password = ""
-for c in range (2):
-    password += random.choice(chars)
-    password += random.choice(chars1)
-    password += random.choice(chars2)
-    password += random.choice(chars3)
-
-password = ''.join(random.sample(password,len(password)))
-#f= open("losenordfil.txt","a") 
-#f.write(password)
-#f.write("\n")
-
-print("Password: ", (password))
