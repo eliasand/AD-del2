@@ -2,10 +2,7 @@ import csv, random, string, subprocess, platform
 chars = "abcdefghijklmnopqrstuvwxyz"
 chars1 = "1234567890"
 chars2 = "!%&/()=#"
-import random
-import string
 password = ""
-
 for c in range (2):
     password += random.choice(chars)
     password += random.choice(chars.upper())
@@ -66,3 +63,4 @@ for row in rows[:5]:
 
     for col in row: 
         print("%10s"%col), 
+    print('\n')
