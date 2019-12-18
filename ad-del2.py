@@ -13,16 +13,17 @@ def lösenGen():
         password += random.choice(chars2)
 
     password = ''.join(random.sample(password,len(password)))
-password = lösenGen()
-print("password" + str(password))
+    return password
+passwood = lösenGen()
+print("password" + str(passwood))
 fields = ['user', "password"] 
 
-rows = [ ['Nikhil', (password)], 
-         ['Sanchit', (password)], 
-         ['Aditya', (password)], 
-         ['Sagar', (password)], 
-         ['Prateek', (password)], 
-         ['Sahil', (password)]] 
+rows = [ ['Nikhil', (passwood)], 
+         ['Sanchit', (passwood)], 
+         ['Aditya', (passwood)], 
+         ['Sagar', (passwood)], 
+         ['Prateek', (passwood)], 
+         ['Sahil', (passwood)]] 
 
 filename = "Auto_AD.csv"
 
